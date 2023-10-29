@@ -20,10 +20,8 @@ param tags object = {}
 @description('Required. Determines whether or not a storage account is deployed')
 param deployStorage bool
 
-param storageAccountName string
-
 // Set a unique string for the storage account name
-// var storageAccountName = 'st${uniqueString(subscription().id)}'
+var storageAccountName = 'st${uniqueString(subscription().id)}'
 
 targetScope = 'subscription'
 
